@@ -1,0 +1,4 @@
+anthropic>=0.40.0
+streamlit>=1.40.0
+fpdf2>=2.7.9
+Pillow>=10.0.0
