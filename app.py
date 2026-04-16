@@ -375,73 +375,76 @@ st.markdown("""
 
     html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
-    /* FUNDAL PAGINA - textura camp */
+    /* FUNDAL PREMIUM DARK */
     .stApp {
-        background: linear-gradient(180deg,
-            #e8f5e9 0%,
-            #f1f8e9 40%,
-            #fff9e6 100%);
-        background-size: cover;
+        background: linear-gradient(135deg, #020f07 0%, #0a1f12 30%, #0d2818 60%, #071a0e 100%);
+        min-height: 100vh;
     }
+    /* Grid futuristic pe fundal */
+    [data-testid="stAppViewContainer"] {
+        background-image:
+            linear-gradient(rgba(116,198,157,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(116,198,157,0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+    /* Text general alb pe dark */
+    .stApp, .stApp p, .stApp label, .stApp div { color: rgba(255,255,255,0.85); }
+    .stMarkdown, .stMarkdown p { color: rgba(255,255,255,0.8) !important; }
+    h1, h2, h3 { color: white !important; }
 
-    /* HEADER HERO cu cer si camp */
+    /* HEADER HERO FUTURISTIC */
     .acp-hero {
-        background:
-            linear-gradient(180deg,
-                #0d47a1 0%,
-                #1565c0 25%,
-                #1976d2 40%,
-                #4fc3f7 60%,
-                #81d4fa 70%,
-                #2d6a4f 70%,
-                #1b4332 100%);
-        padding: 2rem 2.5rem 2.5rem 2.5rem;
+        background: linear-gradient(135deg, #0a1f12 0%, #1b4332 50%, #0d2818 100%);
+        padding: 1.8rem 2.5rem;
         border-radius: 20px;
         color: white;
         margin-bottom: 1.5rem;
-        box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+        box-shadow: 0 0 0 1px rgba(116,198,157,0.15), 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(45,106,79,0.1);
         position: relative;
         overflow: hidden;
-        min-height: 160px;
+        border: 1px solid rgba(116,198,157,0.15);
     }
-    /* Nori decorativi CSS */
+    /* Linie luminoasa sus */
     .acp-hero::before {
         content: '';
-        position: absolute;
-        top: 20px; left: 60px;
-        width: 120px; height: 40px;
-        background: rgba(255,255,255,0.15);
-        border-radius: 50px;
-        box-shadow: 150px 10px 0 rgba(255,255,255,0.1), 80px -5px 0 rgba(255,255,255,0.08);
+        position: absolute; top: 0; left: 10%; right: 10%; height: 2px;
+        background: linear-gradient(90deg, transparent, #74c69d, #f4d03f, #74c69d, transparent);
+        opacity: 0.6;
     }
-    /* Soare -->
+    /* Glow coltar dreapta */
     .acp-hero::after {
-        content: '☀️';
-        position: absolute;
-        top: 15px; right: 30px;
-        font-size: 2.5rem;
-        opacity: 0.9;
+        content: '';
+        position: absolute; top: -50px; right: -50px;
+        width: 200px; height: 200px;
+        background: radial-gradient(circle, rgba(116,198,157,0.08) 0%, transparent 70%);
     }
     .hero-content { position: relative; z-index: 2; }
-    .hero-brand { font-size: 0.7rem; font-weight: 800; letter-spacing: 5px; color: #81d4fa; text-transform: uppercase; }
-    .hero-title { margin: 0.4rem 0 0.2rem 0; font-size: 2rem; font-weight: 800; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-    .hero-sub { margin: 0; font-size: 0.88rem; color: rgba(255,255,255,0.85); }
-    .badge-pro { background: linear-gradient(135deg,#f4d03f,#f39c12); color:#1b4332; font-size:0.62rem; font-weight:800; padding:3px 10px; border-radius:20px; letter-spacing:1px; vertical-align:middle; margin-left:8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+    .hero-brand { font-size: 0.65rem; font-weight: 800; letter-spacing: 5px; color: #74c69d; text-transform: uppercase; }
+    .hero-title { margin: 0.4rem 0 0.2rem 0; font-size: 1.9rem; font-weight: 800; color: white; }
+    .hero-sub { margin: 0; font-size: 0.88rem; color: rgba(255,255,255,0.55); }
+    .badge-pro {
+        background: linear-gradient(135deg,#f4d03f,#f39c12);
+        color:#0d2818; font-size:0.6rem; font-weight:800;
+        padding:3px 10px; border-radius:20px; letter-spacing:1.5px;
+        vertical-align:middle; margin-left:8px;
+        box-shadow: 0 0 12px rgba(244,208,63,0.4);
+    }
 
-    /* CARDURI CULTURI cu ilustratii */
+    /* CARDURI CULTURI GLASSMORPHISM */
     .cultura-card {
-        background: white;
+        background: rgba(10, 30, 20, 0.6);
+        backdrop-filter: blur(10px);
         border-radius: 18px;
-        border: 2px solid #e8f5e9;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        transition: all 0.25s ease;
+        border: 1px solid rgba(116,198,157,0.15);
+        box-shadow: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+        transition: all 0.3s ease;
         overflow: hidden;
         height: 100%;
     }
     .cultura-card:hover {
-        box-shadow: 0 12px 32px rgba(45,106,79,0.2);
-        transform: translateY(-4px);
-        border-color: #74c69d;
+        box-shadow: 0 12px 40px rgba(45,106,79,0.3), 0 0 20px rgba(116,198,157,0.1);
+        transform: translateY(-5px);
+        border-color: rgba(116,198,157,0.4);
     }
     .card-img-area {
         height: 140px;
@@ -452,43 +455,52 @@ st.markdown("""
     }
     .card-img-area svg { height: 130px; width: auto; }
     .card-body { padding: 1rem 1.2rem 1.2rem 1.2rem; }
-    .card-title { font-weight: 800; font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .card-title { font-weight: 800; font-size: 1.05rem; margin-bottom: 0.4rem; color: white !important; }
     .card-tag {
         display: inline-block;
         font-size: 0.68rem; font-weight: 600;
         padding: 2px 8px; border-radius: 20px;
         margin: 2px 1px;
+        background: rgba(116,198,157,0.12) !important;
+        color: #74c69d !important;
+        border: 1px solid rgba(116,198,157,0.2) !important;
     }
-    .card-section { font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin: 0.5rem 0 0.25rem 0; }
+    .card-section { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.35) !important; text-transform: uppercase; letter-spacing: 1px; margin: 0.5rem 0 0.25rem 0; }
 
-    /* CHAT */
+    /* CHAT FUTURISTIC */
     .msg-user {
-        background: linear-gradient(135deg,#d8f3dc,#b7e4c7);
+        background: linear-gradient(135deg, rgba(45,106,79,0.35), rgba(27,67,50,0.4));
         border-radius: 18px 18px 4px 18px;
         padding: 1rem 1.2rem;
         margin: 0.6rem 0 0.6rem 2.5rem;
-        border: 1px solid #95d5b2;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        border: 1px solid rgba(116,198,157,0.25);
+        box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        color: rgba(255,255,255,0.9) !important;
     }
     .msg-agent {
-        background: white;
+        background: rgba(10, 25, 16, 0.7);
+        backdrop-filter: blur(8px);
         border-radius: 18px 18px 18px 4px;
         padding: 1rem 1.2rem;
         margin: 0.6rem 2.5rem 0.6rem 0;
-        border: 1px solid #e8f5e9;
-        box-shadow: 0 3px 14px rgba(0,0,0,0.07);
-        line-height: 1.75;
+        border: 1px solid rgba(116,198,157,0.12);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03);
+        line-height: 1.8;
+        color: rgba(255,255,255,0.85) !important;
     }
-    .msg-label { font-size: 0.7rem; font-weight: 700; opacity: 0.5; margin-bottom: 0.4rem; letter-spacing: 1.5px; text-transform: uppercase; }
+    .msg-label { font-size: 0.65rem; font-weight: 800; opacity: 0.4; margin-bottom: 0.4rem; letter-spacing: 2px; text-transform: uppercase; color: #74c69d !important; }
 
-    /* CALCULATOR */
+    /* CALCULATOR FUTURISTIC */
     .calc-result {
-        background: linear-gradient(135deg,#d8f3dc,#b7e4c7);
+        background: rgba(10, 25, 16, 0.8);
+        backdrop-filter: blur(10px);
         border-radius: 16px; padding: 1.5rem;
-        border: 1px solid #95d5b2;
+        border: 1px solid rgba(116,198,157,0.2);
+        box-shadow: 0 0 30px rgba(45,106,79,0.1);
     }
-    .calc-row { display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid rgba(149,213,178,0.5); font-size:0.92rem; }
-    .calc-row:last-child { border-bottom:none; font-weight:700; }
+    .calc-result h3 { color: #74c69d !important; }
+    .calc-row { display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid rgba(116,198,157,0.1); font-size:0.92rem; color: rgba(255,255,255,0.75); }
+    .calc-row:last-child { border-bottom:none; font-weight:700; color: #74c69d; }
 
     /* INFO BOX sezon */
     .season-box {
@@ -518,21 +530,114 @@ st.markdown("""
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    /* TABS */
+    /* TABS FUTURISTIC */
     .stTabs [data-baseweb="tab-list"] {
-        gap:4px; background:#e8f5e9; border-radius:14px; padding:5px; border:1px solid #c8e6c9;
+        gap:4px;
+        background: rgba(10,25,16,0.6);
+        border-radius:14px; padding:5px;
+        border:1px solid rgba(116,198,157,0.15);
+        backdrop-filter: blur(8px);
     }
-    .stTabs [data-baseweb="tab"] { border-radius:10px; padding:0.5rem 1.1rem; font-weight:600; font-size:0.88rem; }
+    .stTabs [data-baseweb="tab"] {
+        border-radius:10px; padding:0.5rem 1.1rem;
+        font-weight:600; font-size:0.88rem;
+        color: rgba(255,255,255,0.5) !important;
+    }
+    .stTabs [aria-selected="true"] {
+        background: rgba(45,106,79,0.5) !important;
+        color: #74c69d !important;
+        border: 1px solid rgba(116,198,157,0.3) !important;
+        box-shadow: 0 0 12px rgba(45,106,79,0.3) !important;
+    }
 
-    /* SIDEBAR verde inchis */
-    [data-testid="stSidebar"] { background: linear-gradient(180deg, #0d2818 0%, #1b4332 100%); }
-    [data-testid="stSidebar"] * { color: white !important; }
-    [data-testid="stSidebar"] .stButton > button { background: rgba(45,106,79,0.6) !important; border: 1px solid #40916c !important; color: white !important; border-radius: 10px !important; }
-    [data-testid="stSidebar"] .stButton > button:hover { background: #40916c !important; }
-    [data-testid="stSidebar"] input { background: rgba(255,255,255,0.1) !important; border-color: #40916c !important; color: white !important; }
+    /* SIDEBAR dark futuristic */
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #020f07 0%, #0a1f12 100%) !important;
+        border-right: 1px solid rgba(116,198,157,0.1) !important;
+    }
+    [data-testid="stSidebar"] * { color: rgba(255,255,255,0.8) !important; }
+    [data-testid="stSidebar"] .stButton > button {
+        background: rgba(45,106,79,0.3) !important;
+        border: 1px solid rgba(116,198,157,0.2) !important;
+        color: rgba(255,255,255,0.85) !important;
+        border-radius: 10px !important;
+        transition: all 0.2s !important;
+    }
+    [data-testid="stSidebar"] .stButton > button:hover {
+        background: rgba(45,106,79,0.6) !important;
+        border-color: rgba(116,198,157,0.5) !important;
+        box-shadow: 0 0 12px rgba(45,106,79,0.3) !important;
+    }
+    [data-testid="stSidebar"] input {
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(116,198,157,0.2) !important;
+        color: white !important; border-radius: 8px !important;
+    }
 
-    /* BUTTONS */
-    .stButton > button { border-radius: 10px !important; font-weight: 600 !important; transition: all 0.2s !important; }
+    /* INPUTS globale */
+    .stTextInput input, .stTextArea textarea, .stSelectbox div {
+        background: rgba(10,25,16,0.6) !important;
+        border: 1px solid rgba(116,198,157,0.2) !important;
+        color: white !important; border-radius: 10px !important;
+    }
+    .stTextInput input:focus, .stTextArea textarea:focus {
+        border-color: rgba(116,198,157,0.5) !important;
+        box-shadow: 0 0 12px rgba(45,106,79,0.2) !important;
+    }
+
+    /* BUTTONS principale */
+    .stButton > button {
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        transition: all 0.25s !important;
+        background: rgba(27,67,50,0.6) !important;
+        border: 1px solid rgba(116,198,157,0.2) !important;
+        color: rgba(255,255,255,0.85) !important;
+    }
+    .stButton > button:hover {
+        background: rgba(45,106,79,0.7) !important;
+        border-color: rgba(116,198,157,0.4) !important;
+        box-shadow: 0 0 16px rgba(45,106,79,0.3) !important;
+    }
+    /* Buton primary */
+    .stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, #1b4332, #2d6a4f) !important;
+        border: 1px solid rgba(116,198,157,0.4) !important;
+        box-shadow: 0 0 20px rgba(45,106,79,0.3) !important;
+        color: white !important;
+    }
+    .stButton > button[kind="primary"]:hover {
+        background: linear-gradient(135deg, #2d6a4f, #40916c) !important;
+        box-shadow: 0 0 30px rgba(45,106,79,0.5) !important;
+    }
+
+    /* EXPANDER */
+    .streamlit-expanderHeader {
+        background: rgba(10,25,16,0.6) !important;
+        border: 1px solid rgba(116,198,157,0.15) !important;
+        border-radius: 10px !important;
+        color: rgba(255,255,255,0.8) !important;
+    }
+    .streamlit-expanderContent {
+        background: rgba(5,15,10,0.5) !important;
+        border: 1px solid rgba(116,198,157,0.1) !important;
+    }
+
+    /* METRIC */
+    [data-testid="stMetric"] {
+        background: rgba(10,25,16,0.6) !important;
+        border: 1px solid rgba(116,198,157,0.12) !important;
+        border-radius: 12px !important;
+        padding: 0.8rem !important;
+    }
+    [data-testid="stMetricValue"] { color: #74c69d !important; }
+    [data-testid="stMetricLabel"] { color: rgba(255,255,255,0.4) !important; }
+
+    /* INFO/SUCCESS/ERROR */
+    .stAlert { background: rgba(10,25,16,0.7) !important; border-radius: 12px !important; }
+
+    /* HR separatoare */
+    hr { border-color: rgba(116,198,157,0.1) !important; }
 
     #MainMenu, footer, header { visibility: hidden; }
 </style>
@@ -602,33 +707,297 @@ SYSTEM_PROMPT = f"""Ești agronumul personal al fermei ACP Engineer, expert cu 2
 # AUTENTIFICARE
 # ═══════════════════════════════════════════════════════════════════
 
+ACP_LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="180" height="180">
+  <defs>
+    <linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d2818"/>
+      <stop offset="50%" style="stop-color:#1b4332"/>
+      <stop offset="100%" style="stop-color:#0d2818"/>
+    </linearGradient>
+    <linearGradient id="lgold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4d03f"/>
+      <stop offset="50%" style="stop-color:#f39c12"/>
+      <stop offset="100%" style="stop-color:#d4ac0d"/>
+    </linearGradient>
+    <filter id="lglow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="lshadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <circle cx="250" cy="250" r="240" fill="url(#lbg)" filter="url(#lshadow)"/>
+  <circle cx="250" cy="250" r="228" fill="none" stroke="url(#lgold)" stroke-width="2.5" opacity="0.7"/>
+  <circle cx="250" cy="250" r="210" fill="none" stroke="#74c69d" stroke-width="1" opacity="0.3"/>
+  <g stroke="url(#lgold)" stroke-width="2" opacity="0.6">
+    <line x1="250" y1="22" x2="250" y2="40"/><line x1="250" y1="460" x2="250" y2="478"/>
+    <line x1="22" y1="250" x2="40" y2="250"/><line x1="460" y1="250" x2="478" y2="250"/>
+    <line x1="88" y1="88" x2="101" y2="101"/><line x1="399" y1="399" x2="412" y2="412"/>
+    <line x1="412" y1="88" x2="399" y2="101"/><line x1="101" y1="399" x2="88" y2="412"/>
+  </g>
+  <g transform="translate(95,245)" opacity="0.75">
+    <ellipse cx="-28" cy="-58" rx="8" ry="20" fill="#74c69d" transform="rotate(-30,-28,-58)"/>
+    <ellipse cx="-18" cy="-78" rx="7" ry="18" fill="#52b788" transform="rotate(-15,-18,-78)"/>
+    <ellipse cx="-33" cy="-38" rx="7" ry="17" fill="#74c69d" transform="rotate(-45,-33,-38)"/>
+    <line x1="-23" y1="-8" x2="-23" y2="-88" stroke="#40916c" stroke-width="2"/>
+  </g>
+  <g transform="translate(405,245)" opacity="0.75">
+    <ellipse cx="28" cy="-58" rx="8" ry="20" fill="#74c69d" transform="rotate(30,28,-58)"/>
+    <ellipse cx="18" cy="-78" rx="7" ry="18" fill="#52b788" transform="rotate(15,18,-78)"/>
+    <ellipse cx="33" cy="-38" rx="7" ry="17" fill="#74c69d" transform="rotate(45,33,-38)"/>
+    <line x1="23" y1="-8" x2="23" y2="-88" stroke="#40916c" stroke-width="2"/>
+  </g>
+  <g transform="translate(250,148)" filter="url(#lglow)">
+    <rect x="-16" y="-9" width="32" height="18" rx="5" fill="url(#lgold)"/>
+    <line x1="-16" y1="-4" x2="-48" y2="-20" stroke="#f4d03f" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="16" y1="-4" x2="48" y2="-20" stroke="#f4d03f" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-16" y1="4" x2="-48" y2="20" stroke="#f4d03f" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="16" y1="4" x2="48" y2="20" stroke="#f4d03f" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="-48" cy="-20" rx="16" ry="4" fill="none" stroke="#f4d03f" stroke-width="2.5" opacity="0.85"/>
+    <ellipse cx="48" cy="-20" rx="16" ry="4" fill="none" stroke="#f4d03f" stroke-width="2.5" opacity="0.85"/>
+    <ellipse cx="-48" cy="20" rx="16" ry="4" fill="none" stroke="#f4d03f" stroke-width="2.5" opacity="0.85"/>
+    <ellipse cx="48" cy="20" rx="16" ry="4" fill="none" stroke="#f4d03f" stroke-width="2.5" opacity="0.85"/>
+  </g>
+  <line x1="110" y1="193" x2="390" y2="193" stroke="url(#lgold)" stroke-width="1" opacity="0.4"/>
+  <text x="250" y="292" font-family="Georgia,serif" font-size="108" font-weight="bold"
+        fill="url(#lgold)" text-anchor="middle" letter-spacing="6" filter="url(#lglow)">ACP</text>
+  <circle cx="222" cy="312" r="3" fill="url(#lgold)" opacity="0.6"/>
+  <circle cx="250" cy="312" r="3" fill="url(#lgold)" opacity="0.6"/>
+  <circle cx="278" cy="312" r="3" fill="url(#lgold)" opacity="0.6"/>
+  <text x="250" y="360" font-family="Arial,sans-serif" font-size="29" font-weight="700"
+        fill="white" text-anchor="middle" letter-spacing="10" opacity="0.95">ENGINEER</text>
+  <line x1="125" y1="380" x2="375" y2="380" stroke="url(#lgold)" stroke-width="1" opacity="0.4"/>
+  <text x="250" y="410" font-family="Arial,sans-serif" font-size="13" fill="#74c69d"
+        text-anchor="middle" letter-spacing="3" opacity="0.85">AGRI-TECH SOLUTIONS</text>
+</svg>"""
+
 def login_page():
-    st.markdown(f"""
-    <div style="
-        min-height:100vh;
-        background: linear-gradient(180deg, #0d47a1 0%, #1976d2 35%, #4fc3f7 55%, #2d6a4f 55%, #1b4332 100%);
-        display:flex; align-items:center; justify-content:center;
-        padding: 2rem;">
-        <div style="background:white; border-radius:24px; padding:3rem 2.5rem; max-width:420px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,0.25); text-align:center;">
-            <div style="font-size:4rem; margin-bottom:0.5rem">🌱</div>
-            <div style="font-size:0.65rem; font-weight:800; letter-spacing:4px; color:#2d6a4f; text-transform:uppercase">ACP ENGINEER</div>
-            <h2 style="color:#1b4332; margin:0.5rem 0 0.2rem 0; font-size:1.7rem; font-weight:800">Agronom AI Pro</h2>
-            <p style="color:#888; font-size:0.88rem; margin-bottom:2rem">Asistentul tău inteligent de câmp</p>
-            <div style="background:#f1f8e9; border-radius:12px; padding:1.5rem; margin-bottom:1rem; text-align:left">
-                <div style="font-size:0.75rem; font-weight:700; color:#2d6a4f; margin-bottom:0.5rem">🔐 ACCES SECURIZAT</div>
+    # CSS special doar pentru pagina de login
+    st.markdown("""
+    <style>
+    /* Ascunde tot padding-ul Streamlit pe login */
+    .stApp { background: #020f07 !important; }
+    [data-testid="stAppViewContainer"] { padding: 0 !important; }
+    [data-testid="stHeader"] { display: none !important; }
+    [data-testid="stToolbar"] { display: none !important; }
+    .block-container { padding: 0 !important; max-width: 100% !important; }
+    section[data-testid="stSidebar"] { display: none !important; }
+
+    /* Particule de fundal animate */
+    @keyframes float1 { 0%,100%{transform:translateY(0) translateX(0)} 50%{transform:translateY(-30px) translateX(15px)} }
+    @keyframes float2 { 0%,100%{transform:translateY(0) translateX(0)} 50%{transform:translateY(20px) translateX(-20px)} }
+    @keyframes float3 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+    @keyframes pulse-ring { 0%{transform:scale(0.95);opacity:0.8} 50%{transform:scale(1.05);opacity:1} 100%{transform:scale(0.95);opacity:0.8} }
+    @keyframes shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
+    @keyframes scanline { 0%{top:-5%} 100%{top:105%} }
+
+    .login-bg {
+        position: fixed; top:0; left:0; width:100vw; height:100vh;
+        background: radial-gradient(ellipse at 20% 50%, #0a2e1a 0%, #020f07 40%, #000d05 100%);
+        z-index: 0;
+        overflow: hidden;
+    }
+    .login-bg::before {
+        content: '';
+        position: absolute; top:0; left:0; right:0; bottom:0;
+        background-image:
+            radial-gradient(1px 1px at 20% 30%, rgba(116,198,157,0.4) 0%, transparent 100%),
+            radial-gradient(1px 1px at 80% 15%, rgba(244,208,63,0.3) 0%, transparent 100%),
+            radial-gradient(1px 1px at 50% 70%, rgba(116,198,157,0.3) 0%, transparent 100%),
+            radial-gradient(1px 1px at 10% 80%, rgba(244,208,63,0.2) 0%, transparent 100%),
+            radial-gradient(1px 1px at 90% 60%, rgba(116,198,157,0.35) 0%, transparent 100%),
+            radial-gradient(1px 1px at 35% 90%, rgba(244,208,63,0.25) 0%, transparent 100%),
+            radial-gradient(1px 1px at 70% 45%, rgba(116,198,157,0.3) 0%, transparent 100%);
+        background-size: 200px 200px, 300px 300px, 250px 250px, 180px 180px, 220px 220px, 280px 280px, 260px 260px;
+    }
+    /* Grid lines futuristice */
+    .login-grid {
+        position: absolute; top:0; left:0; right:0; bottom:0;
+        background-image:
+            linear-gradient(rgba(116,198,157,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(116,198,157,0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+    }
+    /* Spot light verde */
+    .login-glow-left {
+        position: absolute; top:20%; left:-10%;
+        width: 500px; height: 500px;
+        background: radial-gradient(circle, rgba(45,106,79,0.15) 0%, transparent 70%);
+        animation: float1 8s ease-in-out infinite;
+    }
+    .login-glow-right {
+        position: absolute; bottom:10%; right:-5%;
+        width: 400px; height: 400px;
+        background: radial-gradient(circle, rgba(244,208,63,0.08) 0%, transparent 70%);
+        animation: float2 10s ease-in-out infinite;
+    }
+    /* Scanline effect */
+    .login-scan {
+        position: absolute; left:0; right:0; height:2px;
+        background: linear-gradient(90deg, transparent, rgba(116,198,157,0.3), transparent);
+        animation: scanline 6s linear infinite;
+        pointer-events: none;
+    }
+
+    /* Card glassmorphism */
+    .login-card {
+        position: relative; z-index: 10;
+        background: rgba(10, 30, 20, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(116,198,157,0.25);
+        border-radius: 28px;
+        padding: 2.5rem 2.5rem 2rem 2.5rem;
+        max-width: 440px;
+        width: 90%;
+        margin: 0 auto;
+        box-shadow:
+            0 0 0 1px rgba(116,198,157,0.1),
+            0 30px 60px rgba(0,0,0,0.5),
+            0 0 80px rgba(45,106,79,0.15),
+            inset 0 1px 0 rgba(255,255,255,0.05);
+        text-align: center;
+        animation: float3 6s ease-in-out infinite;
+    }
+    /* Bordera luminoasa */
+    .login-card::before {
+        content: '';
+        position: absolute; top:-1px; left:20%; right:20%; height:2px;
+        background: linear-gradient(90deg, transparent, #74c69d, #f4d03f, #74c69d, transparent);
+        border-radius: 2px;
+        opacity: 0.7;
+    }
+    .login-card::after {
+        content: '';
+        position: absolute; bottom:-1px; left:20%; right:20%; height:1px;
+        background: linear-gradient(90deg, transparent, rgba(116,198,157,0.4), transparent);
+    }
+
+    /* Logo pulsating */
+    .logo-wrap {
+        display: inline-block;
+        animation: pulse-ring 3s ease-in-out infinite;
+        filter: drop-shadow(0 0 20px rgba(116,198,157,0.4)) drop-shadow(0 0 40px rgba(45,106,79,0.2));
+        margin-bottom: 1rem;
+    }
+
+    /* Titlu shimmer */
+    .login-title {
+        font-size: 1.6rem; font-weight: 800; margin: 0.2rem 0;
+        background: linear-gradient(90deg, #74c69d, #f4d03f, #74c69d, #f4d03f);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 4s linear infinite;
+        letter-spacing: 1px;
+    }
+    .login-sub {
+        color: rgba(255,255,255,0.45);
+        font-size: 0.82rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Input stilizat */
+    .login-input-wrap {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(116,198,157,0.2);
+        border-radius: 14px;
+        padding: 1.2rem 1.5rem 1rem 1.5rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    .login-input-label {
+        font-size: 0.65rem; font-weight: 800; letter-spacing: 3px;
+        color: #74c69d; text-transform: uppercase; margin-bottom: 0.6rem;
+    }
+
+    /* Buton futuristic */
+    div[data-testid="stButton"] > button {
+        background: linear-gradient(135deg, #1b4332, #2d6a4f) !important;
+        border: 1px solid rgba(116,198,157,0.4) !important;
+        color: white !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px !important;
+        border-radius: 12px !important;
+        padding: 0.75rem !important;
+        font-size: 0.9rem !important;
+        box-shadow: 0 0 20px rgba(45,106,79,0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+        transition: all 0.3s !important;
+    }
+    div[data-testid="stButton"] > button:hover {
+        background: linear-gradient(135deg, #2d6a4f, #40916c) !important;
+        box-shadow: 0 0 30px rgba(45,106,79,0.5), 0 0 60px rgba(116,198,157,0.2) !important;
+        transform: translateY(-2px) !important;
+    }
+
+    /* Stats row */
+    .login-stats {
+        display: flex; justify-content: center; gap: 1.5rem;
+        margin-top: 1.5rem; padding-top: 1.5rem;
+        border-top: 1px solid rgba(116,198,157,0.1);
+    }
+    .login-stat { text-align: center; }
+    .login-stat-n { font-size: 1.1rem; font-weight: 800; color: #f4d03f; }
+    .login-stat-l { font-size: 0.65rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Footer login */
+    .login-footer {
+        margin-top: 1.5rem; font-size: 0.68rem;
+        color: rgba(255,255,255,0.2); letter-spacing: 1px;
+    }
+    </style>
+
+    <div class="login-bg">
+        <div class="login-grid"></div>
+        <div class="login-glow-left"></div>
+        <div class="login-glow-right"></div>
+        <div class="login-scan"></div>
+    </div>
+    <div style="position:relative;z-index:10;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem;">
+        <div class="login-card">
+            <div class="logo-wrap">""" + ACP_LOGO_SVG + """</div>
+            <div class="login-title">Agronom AI Pro</div>
+            <div class="login-sub">Platforma inteligentă de management agricol · ACP Engineer</div>
+            <div class="login-input-wrap">
+                <div class="login-input-label">🔐 Acces securizat</div>
     """, unsafe_allow_html=True)
-    password = st.text_input("", type="password", placeholder="Introdu parola de acces...", label_visibility="collapsed")
-    if st.button("Intră în aplicație →", use_container_width=True, type="primary"):
+
+    password = st.text_input("", type="password", placeholder="Introdu parola de acces...",
+                              label_visibility="collapsed")
+    if st.button("INTRĂ ÎN APLICAȚIE  →", use_container_width=True, type="primary"):
         if password == APP_PASSWORD:
             st.session_state.authenticated = True
             st.rerun()
         else:
-            st.error("Parolă incorectă.")
+            st.error("⚠️ Parolă incorectă. Încearcă din nou.")
+
     st.markdown("""
             </div>
-            <p style="color:#ccc; font-size:0.72rem; margin-top:1.5rem">© 2025 ACP Engineer · Powered by Claude AI</p>
+            <div class="login-stats">
+                <div class="login-stat">
+                    <div class="login-stat-n">6</div>
+                    <div class="login-stat-l">Culturi</div>
+                </div>
+                <div class="login-stat">
+                    <div class="login-stat-n">T50</div>
+                    <div class="login-stat-l">Dronă</div>
+                </div>
+                <div class="login-stat">
+                    <div class="login-stat-n">AI</div>
+                    <div class="login-stat-l">Claude</div>
+                </div>
+                <div class="login-stat">
+                    <div class="login-stat-n">24/7</div>
+                    <div class="login-stat-l">Online</div>
+                </div>
+            </div>
+            <div class="login-footer">© 2025 ACP ENGINEER · AGRI-TECH SOLUTIONS · POWERED BY CLAUDE AI</div>
         </div>
-    </div>""", unsafe_allow_html=True)
+    </div>
+    """, unsafe_allow_html=True)
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
@@ -642,6 +1011,7 @@ if not st.session_state.authenticated:
 if "messages" not in st.session_state: st.session_state.messages = []
 if "api_key" not in st.session_state: st.session_state.api_key = ""
 if "cultura_activa" not in st.session_state: st.session_state.cultura_activa = None
+if "switch_to_chat" not in st.session_state: st.session_state.switch_to_chat = False
 
 # ═══════════════════════════════════════════════════════════════════
 # SIDEBAR
@@ -759,6 +1129,7 @@ with tab_culturi:
             if st.button(f"💬 Consultă pentru {label}", key=f"open_{cname}", use_container_width=True):
                 st.session_state.cultura_activa = cname
                 st.session_state.quick_q = f"Ce lucrări și tratamente sunt recomandate acum (luna {date.today().strftime('%B')}) pentru {label}? Include setările dronei T50."
+                st.session_state.switch_to_chat = True
                 st.rerun()
 
     # Sectiune drona
@@ -809,6 +1180,7 @@ with tab_culturi:
                 if st.button(f"💬 {q[:58]}{'...' if len(q)>58 else ''}", key=f"q_{cultura_sel}_{j}", use_container_width=True):
                     st.session_state.quick_q = q
                     st.session_state.cultura_activa = cultura_sel
+                    st.session_state.switch_to_chat = True
                     st.rerun()
 
 # ───────────────────────────────────────────────────────────────────
@@ -816,19 +1188,53 @@ with tab_culturi:
 # ───────────────────────────────────────────────────────────────────
 
 with tab_chat:
+    # Switch automat la acest tab când vine din Culturile Mele
+    if st.session_state.get("switch_to_chat"):
+        st.session_state.switch_to_chat = False
+        st.markdown("""
+        <script>
+            setTimeout(function() {
+                const tabs = window.parent.document.querySelectorAll('[data-baseweb="tab"]');
+                if (tabs.length >= 2) { tabs[1].click(); }
+            }, 100);
+        </script>
+        """, unsafe_allow_html=True)
+
     if not st.session_state.api_key:
-        st.info("🔑 Introdu API Key-ul Anthropic în sidebar pentru a începe.")
+        st.markdown("""
+        <div style="background:rgba(10,25,16,0.7);border:1px solid rgba(244,208,63,0.3);border-radius:16px;
+             padding:2rem;text-align:center;max-width:500px;margin:2rem auto;">
+            <div style="font-size:2.5rem;margin-bottom:1rem">🔑</div>
+            <div style="font-weight:800;font-size:1.1rem;color:#f4d03f;margin-bottom:0.5rem">API Key necesar</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:0.88rem;margin-bottom:1.5rem">
+                Introdu cheia API Anthropic pentru a activa agentul agronom.<br>
+                O găsești în sidebar (stânga) sau o poți introduce mai jos.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        col_key1, col_key2, col_key3 = st.columns([1, 2, 1])
+        with col_key2:
+            inline_key = st.text_input("🔑 Introdu API Key Anthropic:", type="password",
+                                        placeholder="sk-ant-api03-...",
+                                        help="Obții cheia de la console.anthropic.com")
+            if inline_key:
+                st.session_state.api_key = inline_key
+                st.rerun()
+            st.markdown("[Creează cont și obține API Key gratuit →](https://console.anthropic.com)",
+                        unsafe_allow_html=False)
     else:
         if st.session_state.cultura_activa:
             cdata = CULTURI[st.session_state.cultura_activa]
+            label_cult = st.session_state.cultura_activa.split(" ", 1)[1]
             col_badge, col_reset = st.columns([3,1])
             with col_badge:
-                st.markdown(f"""<div style="background:{cdata['color_bg']};border:1px solid {cdata['color_border']};
-                    border-radius:10px;padding:0.5rem 1rem;font-weight:700;color:{cdata['color_text']};font-size:0.88rem">
-                    {st.session_state.cultura_activa} — Consultație activă</div>""", unsafe_allow_html=True)
+                st.markdown(f"""<div style="background:{cdata['color_bg']};border:2px solid {cdata['color_border']};
+                    border-radius:10px;padding:0.6rem 1rem;font-weight:700;color:{cdata['color_text']};font-size:0.9rem">
+                    {st.session_state.cultura_activa} — Consultație activă ✅</div>""", unsafe_allow_html=True)
             with col_reset:
                 if st.button("✕ Resetează", key="rst_cult"):
                     st.session_state.cultura_activa = None
+                    st.rerun()
 
         if not st.session_state.messages:
             st.markdown(f"""
